@@ -40,32 +40,29 @@
                  console.log(split_arr)    //["a", "s", "h"]
                  
    数组获取相同元素
-
-1)
     
-     var arr=["1111",'222222','222222','222222',"1111","1111","333333","333333"]
-      function refrain(arr) {
-        var tmp = [];
-        if(Array.isArray(arr)) {
-        　　arr.concat().sort().sort(function(a,b) {
-        　if(a==b && tmp.indexOf(a) === -1){
-            tmp.push(a);
+       var arr=["1111",'222222','222222','222222',"1111","1111","333333","333333"]
+         function refrain(arr) {
+          var tmp = [];
+          if(Array.isArray(arr)) {
+        　　  arr.concat().sort().sort(function(a,b) {
+          　if(a==b && tmp.indexOf(a) === -1){
+              tmp.push(a);
+           }
+          });
          }
-        });
+        return tmp;
        }
-      return tmp;
-     }
      
-   2）
       
-    var testArr=[]
-    for (let i=0;i<arr.length;i++) {
-       for (let j=i;j<arr.length;j++) {
+        var testArr=[]
+         for (let i=0;i<arr.length;i++) {
+          for (let j=i;j<arr.length;j++) {
            if(arr[i]==arr[j]&&testArr.indexOf(arr[i])===-1) {
             testArr.push(arr[i])
            }
-       }     
-     }
+         }     
+      }
 
    
              
